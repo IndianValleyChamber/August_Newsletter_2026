@@ -1112,15 +1112,18 @@ a:focus-visible .image-card figcaption {
     grid-template-columns: 1fr;
   }
 
-  .meeting-card-left,
+  .meeting-card-left {
+  border-right: 0;
+  border-bottom: 0;
+}
   .meeting-card-right {
     padding: 34px 28px;
   }
 
-  .meeting-card-left {
-    border-right: 0;
-    border-bottom: 1px solid rgba(25, 24, 22, 0.42);
-  }
+.meeting-card-left {
+  border-right: 0;
+  border-bottom: 0;
+}
 
   .meeting-card-right {
     align-items: flex-start;
