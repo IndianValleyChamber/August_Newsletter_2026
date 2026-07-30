@@ -18,8 +18,8 @@ html {
 
 body {
   margin: 0;
-  padding: 24px;
-  background: #deddd9;
+  padding: 30px;
+  background: #11110f;
   color: #191816;
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
@@ -50,7 +50,7 @@ p {
 
 .newsletter-shell {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -58,9 +58,27 @@ p {
   position: relative;
   overflow: hidden;
   background: #f6f2e9;
+  border: 1px solid rgba(246, 242, 233, 0.72);
+  border-radius: 4px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+}
+
+/*
+  Decorative inset border.
+
+  Because this is positioned over the newsletter rather than added
+  as padding, all horizontal section borders still extend completely
+  to the outer edge of the cream newsletter.
+*/
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: 20;
   border: 1px solid rgba(25, 24, 22, 0.62);
-  border-radius: 18px;
-  box-shadow: 0 22px 60px rgba(25, 24, 22, 0.12);
+  border-radius: 2px;
+  pointer-events: none;
 }
 
 
@@ -130,7 +148,7 @@ p {
    ========================================================= */
 
 .newsletter-header {
-  padding: 26px 40px 34px;
+  padding: 34px 52px 42px;
   border-bottom: 1px solid rgba(25, 24, 22, 0.5);
 }
 
@@ -216,8 +234,8 @@ p {
    ========================================================= */
 
 .newsletter-intro {
-  max-width: 900px;
-  padding: 78px 64px 84px;
+  max-width: 960px;
+  padding: 82px 76px 88px;
 }
 
 .newsletter-intro h2 {
@@ -304,7 +322,7 @@ p {
    ========================================================= */
 
 .editorial-section {
-  padding: 82px 64px;
+  padding: 86px 76px;
   border-bottom: 1px solid rgba(25, 24, 22, 0.5);
 }
 
@@ -414,6 +432,44 @@ a:focus-visible .image-card figcaption {
 .mickey-card:hover img {
   transform: scale(1.015);
   filter: grayscale(92%) contrast(1.08);
+}
+
+
+/* =========================================================
+   GOLD DIGGERS
+   ========================================================= */
+
+.gold-diggers-image {
+  min-height: 560px;
+  border: 1px solid rgba(25, 24, 22, 0.48);
+}
+
+.gold-diggers-copy {
+  max-width: 850px;
+  padding-top: 48px;
+}
+
+
+/* =========================================================
+   VOLUNTEERS
+   ========================================================= */
+
+.volunteers-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  border: 1px solid rgba(25, 24, 22, 0.48);
+}
+
+.volunteers-image {
+  min-height: 560px;
+}
+
+.volunteers-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 52px;
+  border-left: 1px solid rgba(25, 24, 22, 0.48);
 }
 
 
@@ -681,7 +737,7 @@ a:focus-visible .image-card figcaption {
    ========================================================= */
 
 .newsletter-footer {
-  padding: 54px 64px 30px;
+  padding: 62px 76px 42px;
 }
 
 .footer-brand {
@@ -758,15 +814,15 @@ a:focus-visible .image-card figcaption {
 @media (max-width: 900px) {
 
   body {
-    padding: 14px;
+    padding: 18px;
   }
 
   .newsletter-header,
   .newsletter-intro,
   .editorial-section,
   .newsletter-footer {
-    padding-right: 38px;
-    padding-left: 38px;
+    padding-right: 44px;
+    padding-left: 44px;
   }
 
   .header-brand {
@@ -803,7 +859,8 @@ a:focus-visible .image-card figcaption {
   .member-copy,
   .website-copy,
   .website-action,
-  .membership-card {
+  .membership-card,
+  .volunteers-copy {
     padding: 38px;
   }
 }
@@ -816,29 +873,32 @@ a:focus-visible .image-card figcaption {
 @media (max-width: 680px) {
 
   body {
-    padding: 0;
-    background: #f6f2e9;
+    padding: 8px;
+    background: #11110f;
     font-size: 14px;
   }
 
   .newsletter {
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
+    border-radius: 2px;
     box-shadow: none;
+  }
+
+  .newsletter::before {
+    inset: 6px;
+    border-radius: 1px;
   }
 
   .newsletter-header,
   .newsletter-intro,
   .editorial-section,
   .newsletter-footer {
-    padding-right: 22px;
-    padding-left: 22px;
+    padding-right: 26px;
+    padding-left: 26px;
   }
 
   .newsletter-header {
-    padding-top: 22px;
-    padding-bottom: 28px;
+    padding-top: 26px;
+    padding-bottom: 32px;
   }
 
   .header-brand {
@@ -899,7 +959,7 @@ a:focus-visible .image-card figcaption {
 
   .meeting-card-left,
   .meeting-card-right {
-    padding: 34px 24px;
+    padding: 34px 28px;
   }
 
   .meeting-card-left {
@@ -931,7 +991,8 @@ a:focus-visible .image-card figcaption {
   .event-row,
   .member-row,
   .website-layout,
-  .membership-layout {
+  .membership-layout,
+  .volunteers-layout {
     grid-template-columns: 1fr;
   }
 
@@ -950,6 +1011,24 @@ a:focus-visible .image-card figcaption {
     margin-top: 34px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .gold-diggers-image {
+    min-height: 390px;
+  }
+
+  .gold-diggers-copy {
+    padding-top: 34px;
+  }
+
+  .volunteers-image {
+    min-height: 390px;
+  }
+
+  .volunteers-copy {
+    padding: 36px 26px;
+    border-top: 1px solid rgba(25, 24, 22, 0.48);
+    border-left: 0;
   }
 
   .event-row {
@@ -1053,12 +1132,20 @@ a:focus-visible .image-card figcaption {
 
 @media (max-width: 420px) {
 
+  body {
+    padding: 5px;
+  }
+
+  .newsletter::before {
+    inset: 4px;
+  }
+
   .newsletter-header,
   .newsletter-intro,
   .editorial-section,
   .newsletter-footer {
-    padding-right: 18px;
-    padding-left: 18px;
+    padding-right: 22px;
+    padding-left: 22px;
   }
 
   .header-brand {
@@ -1082,7 +1169,9 @@ a:focus-visible .image-card figcaption {
 
   .event-image,
   .member-image,
-  .membership-image {
+  .membership-image,
+  .gold-diggers-image,
+  .volunteers-image {
     min-height: 330px;
   }
 
