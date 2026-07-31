@@ -361,7 +361,7 @@ p {
   position: relative;
   overflow: hidden;
   margin: 0;
-  background: #d7d6d1;
+ 
 }
 
 .image-card img {
@@ -369,7 +369,7 @@ p {
   height: 100%;
   object-fit: cover;
   transition:
-    transform 450ms ease,
+    transform 350ms ease,
     filter 450ms ease;
 }
 
@@ -410,13 +410,9 @@ a:focus-visible .image-card figcaption {
 }
 
 
-/* =========================================================
-   LARGE GREENHOUSE IMAGE
-   ========================================================= */
-
 .canopy-main-image {
   width: 100%;
-  height: clamp(520px, 56vw, 740px);
+  height: clamp(380px, 42vw, 560px);
   min-height: 0;
   margin: 0;
   border: 1px solid rgba(25, 24, 22, 0.48);
@@ -508,14 +504,20 @@ a:focus-visible .image-card figcaption {
    GOLD DIGGERS
    ========================================================= */
 
+.gold-diggers-layout {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
 .gold-diggers-image {
-  min-height: 560px;
-  border: 1px solid rgba(25, 24, 22, 0.48);
+  margin: 0;
+  border: 1px solid rgba(25,24,22,.48);
 }
 
 .gold-diggers-copy {
-  max-width: 850px;
-  padding-top: 48px;
+  padding-top: 0;
 }
 
 
@@ -1009,6 +1011,26 @@ a:focus-visible .image-card figcaption {
   .volunteers-copy {
     padding: 38px;
   }
+    /* =========================================================
+     GOLD DIGGERS
+     ========================================================= */
+
+  .gold-diggers-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .gold-diggers-image {
+    max-width: 100%;
+    width: 100%;
+    min-height: 390px;
+    margin: 0;
+  }
+
+  .gold-diggers-copy {
+    padding-top: 0;
+    max-width: 100%;
+  }
 }
 
 
@@ -1422,3 +1444,4 @@ a:focus-visible .image-card figcaption {
     animation-iteration-count: 1 !important;
   }
 }
+
