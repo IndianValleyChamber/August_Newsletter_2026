@@ -628,12 +628,12 @@ a:focus-visible .image-card figcaption {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px;
-  background: #ebe7de;
+  padding: 53px;
+ 
 }
 
 .logo-image-card img {
-  width: 70%;
+  width: 90%;
   height: auto;
   max-height: 270px;
   object-fit: contain;
