@@ -941,7 +941,6 @@ a:focus-visible .image-card figcaption {
   letter-spacing: 0.08em;
 }
 
-
 /* =========================================================
    TABLET
    ========================================================= */
@@ -1077,32 +1076,33 @@ a:focus-visible .image-card figcaption {
   }
 
   .newsletter-nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: relative;
-}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+  }
 
-.newsletter-nav::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: rgba(25, 24, 22, 0.35);
-  transform: translateX(-0.5px);
-  pointer-events: none;
-}
+  .newsletter-nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: rgba(25, 24, 22, 0.35);
+    transform: translateX(-0.5px);
+    pointer-events: none;
+  }
 
-.newsletter-nav a {
-  min-height: 58px;
-  border-bottom: 1px solid rgba(25, 24, 22, 0.35);
-  font-size: 0.6rem;
-}
+  .newsletter-nav a {
+    min-height: 58px;
+    border-bottom: 1px solid rgba(25, 24, 22, 0.35);
+    font-size: 0.6rem;
+  }
 
-.newsletter-nav a:nth-last-child(-n + 2) {
-  border-bottom: 0;
-}
+  .newsletter-nav a:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
   .newsletter-intro {
     padding-top: 54px;
     padding-bottom: 58px;
@@ -1113,17 +1113,18 @@ a:focus-visible .image-card figcaption {
   }
 
   .meeting-card-left {
-  border-right: 0;
-  border-bottom: 0;
-}
+    border-right: 0;
+    border-bottom: 0;
+  }
+
   .meeting-card-right {
     padding: 34px 28px;
   }
 
-.meeting-card-left {
-  border-right: 0;
-  border-bottom: 0;
-}
+  .meeting-card-left {
+    border-right: 0;
+    border-bottom: 0;
+  }
 
   .meeting-card-right {
     align-items: flex-start;
@@ -1265,8 +1266,12 @@ a:focus-visible .image-card figcaption {
     padding: 36px 26px;
   }
 
-  .website-action {
-    border-top: 1px solid rgba(25, 24, 22, 0.48);
+  .website-layout .website-copy {
+    border-bottom: 0 !important;
+  }
+
+  .website-layout .website-action {
+    border-top: 0 !important;
     border-left: 0;
   }
 
