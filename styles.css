@@ -960,6 +960,15 @@ a:focus-visible .image-card figcaption {
     padding: 18px;
   }
 
+  .meeting-card-left,
+.meeting-card-right {
+    padding: 34px 26px;
+}
+
+.meeting-card-right {
+    align-items: flex-start;
+    text-align: left;
+}
   .newsletter-header,
   .newsletter-intro,
   .editorial-section,
