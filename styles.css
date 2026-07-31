@@ -589,6 +589,13 @@ a:focus-visible .image-card figcaption {
   border-left: 0;
 }
 
+/* =========================================================
+   VOLUNTEERS OVERRIDE
+   ========================================================= */
+
+.volunteers-row .event-image {
+  min-height: 300px;
+}
 
 /* =========================================================
    NEW MEMBERS
